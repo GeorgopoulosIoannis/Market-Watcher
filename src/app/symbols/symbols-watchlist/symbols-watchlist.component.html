@@ -1,0 +1,34 @@
+<div class="row justify-content-around">
+	<button
+		class="btn btn-success"
+		[disabled]="!selectedFromSymbol || watchlist.length >= 5"
+		(click)="addToWatchlist()"
+	>
+		Add
+	</button>
+
+	<button class="btn btn-danger" [disabled]="!watchlistName" (click)="removeFromWatchlist()">
+		Remove
+	</button>
+
+	<button class="btn btn-primary" (click)="saveWatchlist()">
+		Save
+	</button>
+</div>
+
+<table class="table table-hover table-bordered">
+	<thead class="thead-dark">
+		<tr>
+			<th scope="col">Watchlist</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr
+			*ngFor="let item of watchlist"
+			(click)="selectWatchlist(item)"
+			[ngClass]="{ highlight: item.id == watchlistName }"
+		>
+			<td>{{ item.name }}</td>
+		</tr>
+	</tbody>
+</table>

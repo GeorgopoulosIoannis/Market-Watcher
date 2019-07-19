@@ -1,0 +1,24 @@
+<div *ngFor="let symbol of watchlist" (click)="highlightRow(symbol)">
+	<div class="card">
+		<div class="card-header d-flex">
+			<b
+				><span>{{ symbol.description }}</span></b
+			>
+		</div>
+		<div class="card-body" [ngClass]="{ highlight: symbol.id == selectedName }">
+			<p>{{ symbol.price }} {{ symbol.currency }}</p>
+			<div *ngIf="symbol.price < symbol.close; else checkPositive">
+				<img src="assets/down-arrow.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+			</div>
+			<ng-template #checkPositive>
+				<div *ngIf="symbol.price > symbol.close; else equal">
+					<img src="assets/up-arrow.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+				</div>
+			</ng-template>
+			<ng-template #equal>
+				<img src="assets/line.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+			</ng-template>
+			<span class="font-weight-light mr-auto">{{ symbol.stockExchangeLong }} </span>
+		</div>
+	</div>
+</div>

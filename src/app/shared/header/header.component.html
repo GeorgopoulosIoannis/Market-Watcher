@@ -1,0 +1,27 @@
+<nav class="navbar navbar-light bg-primary">
+	<a class="navbar-brand mr-auto" href="#">
+		<img src="/assets/stock-earnings.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+		Market Watcher
+	</a>
+	<button
+		type="button"
+		*ngIf="!Authenticated()"
+		[routerLink]="['/login']"
+		routerLinkActive="router-link-active"
+		class="btn btn-outline-light"
+	>
+		Login
+	</button>
+	<button
+		type="button"
+		*ngIf="!Authenticated()"
+		[routerLink]="['/register']"
+		routerLinkActive="router-link-active"
+		class="btn btn-outline-light"
+	>
+		Register
+	</button>
+	<button type="button" *ngIf="Authenticated()" (click)="logout()" class="btn btn-outline-light">
+		Logout
+	</button>
+</nav>
