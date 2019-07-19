@@ -10,7 +10,8 @@ import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { RouterModule } from '@angular/router';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
-
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './auth.interceptor';
 @NgModule({
 	declarations: [
 		LoginComponent,
@@ -33,7 +34,15 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 			}
 		})
 	],
-	providers: [AuthService, JwtHelperService],
+	providers: [
+		AuthService,
+		JwtHelperService,
+		{
+			provide: HTTP_INTERCEPTORS,
+			useClass: AuthInterceptor,
+			multi: true
+		}
+	],
 	exports: [LoginComponent]
 })
 export class AuthModule {}

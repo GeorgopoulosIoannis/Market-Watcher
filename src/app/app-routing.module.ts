@@ -9,15 +9,19 @@ import { SymbolsListComponent } from './symbols/symbols-list/symbols-list.compon
 import { SymbolsWatchlistComponent } from './symbols/symbols-watchlist/symbols-watchlist.component';
 import { SymbolsLayoutComponent } from './symbols/symbols-layout/symbols-layout.component';
 import { DashboardLayoutComponent } from './dashboard/dashboard-layout/dashboard-layout.component';
+import { AuthGuard } from './auth/auth.guard';
+import { AuthGuard2 } from './auth/auth2.guard';
 
 const routes: Routes = [
-	{ path: 'login', component: LoginComponent },
-	{ path: 'register', component: RegisterComponent },
-	{ path: 'authenticate', component: AuthenticateComponent },
-	{ path: 'resetPassword', component: ResetPasswordComponent },
-	{ path: 'forgotPassword', component: ForgotPasswordComponent },
-	{ path: 'symbols', component: SymbolsLayoutComponent },
-	{ path: 'dashboard', component: DashboardLayoutComponent }
+	{ path: 'login', component: LoginComponent, canActivate: [AuthGuard2] },
+	{ path: 'register', component: RegisterComponent, canActivate: [AuthGuard2] },
+	{ path: 'authenticate', component: AuthenticateComponent, canActivate: [AuthGuard2] },
+	{ path: 'resetPassword', component: ResetPasswordComponent, canActivate: [AuthGuard2] },
+	{ path: 'forgotPassword', component: ForgotPasswordComponent, canActivate: [AuthGuard2] },
+	{ path: 'symbols', component: SymbolsLayoutComponent, canActivate: [AuthGuard] },
+	{ path: 'dashboard', component: DashboardLayoutComponent, canActivate: [AuthGuard] },
+	{ path: '', component: LoginComponent, canActivate: [AuthGuard2] },
+	{ path: '*', component: LoginComponent, canActivate: [AuthGuard2] }
 ];
 
 @NgModule({
