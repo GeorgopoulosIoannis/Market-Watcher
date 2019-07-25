@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="col-12">
+		<h3>
+			Dashboard<img src="assets/line-chart.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-12 col-md-4">
+		<mw-dashboard-watchlist (messageEvent)="receiveMessage($event)"></mw-dashboard-watchlist>
+	</div>
+	<div class="col-12 col-md-8 ">
+		<div class="row">
+			<div class="col-md-12">
+				<h4>History Chart</h4>
+				<mw-history-chart [parentSubject]="parentSubject"></mw-history-chart>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Intraday Chart</h4>
+				<mw-intraday-chart [parentSubject]="parentSubject"></mw-intraday-chart>
+			</div>
+		</div>
+	</div>
+</div>

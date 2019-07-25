@@ -1,0 +1,16 @@
+.card-body.highlight {
+
+	background-color:lightgray;
+
+  }
+
+  .card-body {
+	  display: flex;
+	  flex-direction: column;
+  }
+
+  .stock-heading {
+	  display: flex;
+	  justify-content: space-between;
+  }
+

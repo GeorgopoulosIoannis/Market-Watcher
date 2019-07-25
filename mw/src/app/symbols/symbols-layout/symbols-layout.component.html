@@ -1,0 +1,16 @@
+<h3 class="row">
+	<h3 class="col-12">
+		<h3>
+			Symbols<img src="assets/table-grid.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+		</h3>
+	</h3>
+</h3>
+
+<div class="row">
+	<div class="col-12 col-md-7">
+		<mw-symbols-list (messageEvent)="receiveMessage($event)"></mw-symbols-list>
+	</div>
+	<div class="col-12 col-md-5">
+		<mw-symbols-watchlist [selectedFromSymbol]="selectedFromSymbol"></mw-symbols-watchlist>
+	</div>
+</div>
