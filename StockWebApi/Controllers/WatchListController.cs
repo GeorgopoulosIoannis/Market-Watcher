@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using WebAPI.Repositories;
 
 namespace WebAPI.Controllers
 {
@@ -19,14 +20,15 @@ namespace WebAPI.Controllers
     public class WatchlistController : ControllerBase
     {
 
-        readonly ApplicationDbContext _dbContext;
+        readonly WatchlistRepository _repo;
 
         readonly UserManager<IdentityUser> _userManager;
 
-        public WatchlistController(UserManager<IdentityUser> userManager,ApplicationDbContext dbContext)
+
+        public WatchlistController(UserManager<IdentityUser> userManager, WatchlistRepository repo)
         {
-            _dbContext = dbContext;
             _userManager = userManager;
+            _repo = repo;
         }
 
         [HttpGet]
@@ -34,44 +36,43 @@ namespace WebAPI.Controllers
         {
 
             string userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
-            var watchlist=_dbContext.Watchlists.Include(s=>s.Symbol).Where(i => i.UserId == userId).Select(x=>x.Symbol).ToList();
-
+            List<Symbol> watchlist = _repo.GetWatchlistSymbols(userId).ToList();
             return Ok(watchlist);
         }
 
         [HttpPost("save")]
         public async Task<IActionResult> Save([FromBody] List<Symbol> symbols)
-        { 
+        {
             string userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
             DeleteWatchlist(userId);
-            foreach(Symbol symbol in symbols)
+            foreach (Symbol symbol in symbols)
             {
                 Watchlist watchlist = new Watchlist();
- 
+
                 watchlist.SymbolId = symbol.Id;
                 watchlist.UserId = userId;
                 watchlist.CreatedById = userId;
                 watchlist.DateCreated = DateTime.UtcNow;
                 try
                 {
-                    _dbContext.Watchlists.Add(watchlist);
+                    _repo.Add(watchlist);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     return Ok(ex);
                 }
             }
-            _dbContext.SaveChanges();
+            _repo.Save();
             return Ok();
         }
-       
+
         private bool DeleteWatchlist(string userId)
         {
-            var oldList=_dbContext.Watchlists.Where(x => x.UserId == userId).ToList();
-            foreach(var item in oldList)
+            var oldList = _repo.GetById(userId);
+            foreach (var item in oldList)
             {
-                _dbContext.Watchlists.Remove(item);
+                _repo.Delete(item);
             }
             return true;
         }
