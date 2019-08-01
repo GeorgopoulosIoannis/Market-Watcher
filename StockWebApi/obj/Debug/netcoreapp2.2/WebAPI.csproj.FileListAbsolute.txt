@@ -12,3 +12,17 @@ C:\Users\asdf\Desktop\StackForce\StockWebApi\StockWebApi\obj\Debug\netcoreapp2.2
 C:\Users\asdf\Desktop\StackForce\StockWebApi\StockWebApi\obj\Debug\netcoreapp2.2\WebAPI.RazorTargetAssemblyInfo.cache
 C:\Users\asdf\Desktop\StackForce\StockWebApi\StockWebApi\obj\Debug\netcoreapp2.2\WebAPI.dll
 C:\Users\asdf\Desktop\StackForce\StockWebApi\StockWebApi\obj\Debug\netcoreapp2.2\WebAPI.pdb
+C:\Users\GGA\Desktop\random\Market-Watcher\StockWebApi\bin\Debug\netcoreapp2.2\WebAPI.deps.json
+C:\Users\GGA\Desktop\random\Market-Watcher\StockWebApi\bin\Debug\netcoreapp2.2\WebAPI.runtimeconfig.json
+C:\Users\GGA\Desktop\random\Market-Watcher\StockWebApi\bin\Debug\netcoreapp2.2\WebAPI.runtimeconfig.dev.json
+C:\Users\GGA\Desktop\random\Market-Watcher\StockWebApi\bin\Debug\netcoreapp2.2\WebAPI.dll
+C:\Users\GGA\Desktop\random\Market-Watcher\StockWebApi\bin\Debug\netcoreapp2.2\WebAPI.pdb
+C:\Users\GGA\Desktop\random\Market-Watcher\StockWebApi\obj\Debug\netcoreapp2.2\WebAPI.csprojAssemblyReference.cache
+C:\Users\GGA\Desktop\random\Market-Watcher\StockWebApi\obj\Debug\netcoreapp2.2\WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\GGA\Desktop\random\Market-Watcher\StockWebApi\obj\Debug\netcoreapp2.2\WebAPI.RazorAssemblyInfo.cache
+C:\Users\GGA\Desktop\random\Market-Watcher\StockWebApi\obj\Debug\netcoreapp2.2\WebAPI.RazorAssemblyInfo.cs
+C:\Users\GGA\Desktop\random\Market-Watcher\StockWebApi\obj\Debug\netcoreapp2.2\WebAPI.AssemblyInfoInputs.cache
+C:\Users\GGA\Desktop\random\Market-Watcher\StockWebApi\obj\Debug\netcoreapp2.2\WebAPI.AssemblyInfo.cs
+C:\Users\GGA\Desktop\random\Market-Watcher\StockWebApi\obj\Debug\netcoreapp2.2\WebAPI.RazorTargetAssemblyInfo.cache
+C:\Users\GGA\Desktop\random\Market-Watcher\StockWebApi\obj\Debug\netcoreapp2.2\WebAPI.dll
+C:\Users\GGA\Desktop\random\Market-Watcher\StockWebApi\obj\Debug\netcoreapp2.2\WebAPI.pdb

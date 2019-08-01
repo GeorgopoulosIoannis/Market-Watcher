@@ -13551,23 +13551,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\asdf\\.nuget\\packages\\": {},
+    "C:\\Users\\GGA\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\asdf\\Desktop\\StackForce\\StockWebApi\\StockWebApi\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\GGA\\Desktop\\random\\Market-Watcher\\StockWebApi\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\asdf\\Desktop\\StackForce\\StockWebApi\\StockWebApi\\WebAPI.csproj",
-      "packagesPath": "C:\\Users\\asdf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\asdf\\Desktop\\StackForce\\StockWebApi\\StockWebApi\\obj\\",
+      "projectPath": "C:\\Users\\GGA\\Desktop\\random\\Market-Watcher\\StockWebApi\\WebAPI.csproj",
+      "packagesPath": "C:\\Users\\GGA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\GGA\\Desktop\\random\\Market-Watcher\\StockWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\asdf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GGA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -20,6 +20,8 @@ using WebAPI.DATA;
 using WebAPI.Models;
 using WebAPI.Services;
 using Swashbuckle.AspNetCore.Swagger;
+using StockWebApi.Interfaces;
+using StockWebApi.Repositories;
 
 namespace WebAPI
 {
@@ -45,6 +47,7 @@ namespace WebAPI
                 .AllowAnyHeader()
                 ;
             }));
+            services.AddScoped<ISymbolRepository, SymbolRepository>();
             ///TODO
             //services.AddAuthentication().AddGoogle(options =>
             //{
